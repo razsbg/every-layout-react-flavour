@@ -1,3 +1,5 @@
-export function Stack(props) {
-  return <div className="stack">{props.children}</div>;
+import "./Stack.css";
+
+export function Stack({ children }) {
+  return <div className="stack">{children}</div>;
 }
