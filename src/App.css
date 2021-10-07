@@ -1,6 +1,8 @@
 :root {
   --clr-bg: hsl(348, 100%, 7%);
   --clr-body-text: hsl(352, 43%, 93%);
+
+  --space: 1.5rem;
 }
 
 html {
@@ -13,4 +15,16 @@ body,
 #root,
 .App {
   height: 100%;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+p {
+  padding: 0.5rem;
+  border: 1px solid var(--clr-body-text);
 }

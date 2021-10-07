@@ -7,7 +7,15 @@ function App() {
   return (
     <div className="App">
       <main>
-        <Stack>
+        <Stack recursive splitAfter={3}>
+          <p>Let's implement a stack 📚</p>
+          <p>Let's implement a stack 📚</p>
+          <p>Let's implement a stack 📚</p>
+          <div>
+            <p>Let's implement a stack 📚</p>
+            <p>Let's implement a stack 📚</p>
+            <p>Let's implement a stack 📚</p>
+          </div>
           <p>Let's implement a stack 📚</p>
         </Stack>
       </main>

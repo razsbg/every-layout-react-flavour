@@ -1,3 +1,9 @@
 .stack {
-  border: 1px solid var(--clr-body-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * + * {
+  margin-top: 1.5rem;
 }
