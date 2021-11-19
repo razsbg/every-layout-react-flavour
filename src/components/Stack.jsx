@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-export function Stack({ children, space = "var(--space)", recursive = false, splitAfter = null }) {
+export function Stack({ children, space = null, recursive = false, splitAfter = null }) {
   const StyledDiv = styled.div`
     & {
       display: flex;
@@ -14,7 +14,8 @@ export function Stack({ children, space = "var(--space)", recursive = false, spl
     }
 
     ${recursive ? "&" : "& >"} * + * {
-      margin-top: ${space};
+      ${space && `--space: ${space}`}
+      margin-top: var(--space, 1rem);
     }
 
     ${splitAfter &&

@@ -2,12 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   :root {
-    --clr-bg: hsl(348, 100%, 7%);
-    --clr-body-text: hsl(352, 43%, 93%);
+    --clr-bg: hsl(0, 11%, 85%);
+    --clr-body-text: hsl(177, 31%, 43%);
 
     --ff: sans-serif;
-
-    --space: 1.5rem;
   }
 
   html {
@@ -21,5 +19,10 @@ export default createGlobalStyle`
   #root,
   .App {
     height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 `;

@@ -1,11 +1,11 @@
-import { Stack } from "./components/Stack/Stack";
+import { Stack } from "./components/Stack";
 
 function App() {
   return (
     <div className="App">
       <header>
-        <div className="logo">
-          <img src="" alt="Logo" />
+        <div className="logo" style={{ width: "100px" }}>
+          <img src="/jack-in-the-egg-rooster1910.svg" alt="Logo" />
         </div>
         <nav>
           <ul>
