@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <Stack recursive splitAfter={3}>
+        <Stack splitAfter={1}>
           <p>Let's implement a stack 📚</p>
           <p>Let's implement a stack 📚</p>
           <p>Let's implement a stack 📚</p>
