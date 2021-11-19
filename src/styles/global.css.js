@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   :root {
-    --clr-bg: hsl(0, 11%, 85%);
-    --clr-body-text: hsl(177, 31%, 43%);
+    --clr-bg: hsl(12, 100%, 82%);
+    --clr-body-text: hsl(252, 51%, 24%);
 
     --ff: sans-serif;
   }
