@@ -3,18 +3,13 @@ import styled from "styled-components";
 
 export function Stack({ children, space = null, recursive = false, splitAfter = null }) {
   const StyledDiv = styled.div`
-    & {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
+    ${space && `--space: ${space};`}
 
-    & > * + * {
-      margin-top: 1.5rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-    ${recursive ? "&" : "& >"} * + * {
-      ${space && `--space: ${space}`}
+    ${!recursive && ">"} * + * {
       margin-top: var(--space, 1rem);
     }
 
