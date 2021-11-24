@@ -9,7 +9,7 @@ export function Switcher(props) {
 
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gap, 1rem);
+    gap: var(--gap, var(--s1));
 
     & > * {
       flex-grow: 1;

@@ -16,7 +16,7 @@ function App() {
       <main style={{ paddingInline: "1.75rem" }}>
         <Stack>
           <h2>This is the content area</h2>
-          <Switcher threshold="50rem">
+          <Switcher threshold="50rem" gap="var(--s-1)">
             <StyledCard>
               <h3>Card title</h3>
               <p>Card content</p>
