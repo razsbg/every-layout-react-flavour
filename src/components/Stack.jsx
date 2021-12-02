@@ -1,19 +1,19 @@
 import * as React from "react";
 import styled from "styled-components";
 
-export function Stack({ children, space = null, recursive = false, splitAfter = null }) {
-  const StyledDiv = styled.div`
-    ${space && `--space: ${space};`}
+const StyledDiv = styled.div`
+  ${({ space }) => space && `--space: ${space};`}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    ${!recursive && ">"} * + * {
-      margin-top: var(--space, 1rem);
-    }
+  ${({ recursive }) => !recursive && ">"} * + * {
+    margin-top: var(--space, 1rem);
+  }
 
-    ${splitAfter &&
+  ${({ splitAfter }) =>
+    splitAfter &&
     `
     &:only-child {
       height: 100%;
@@ -23,7 +23,10 @@ export function Stack({ children, space = null, recursive = false, splitAfter = 
       margin-bottom: auto;
     }
   `}
-  `;
+`;
 
-  return <StyledDiv>{children}</StyledDiv>;
+export function Stack(props) {
+  const { children } = props;
+
+  return <StyledDiv {...props}>{children}</StyledDiv>;
 }

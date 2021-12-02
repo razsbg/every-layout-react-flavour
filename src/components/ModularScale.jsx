@@ -22,7 +22,7 @@ export function ModularScale() {
         const cssVarName = getCSSVarName(number, index);
 
         return (
-          <ScaleItemContainer>
+          <ScaleItemContainer key={index}>
             <p style={{ width: "3rem", height: `var(${cssVarName})`, backgroundColor: "black" }} />
             <p style={{ fontWeight: "bold" }}>{cssVarName}</p>
           </ScaleItemContainer>

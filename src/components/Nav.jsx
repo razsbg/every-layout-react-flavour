@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 import { Cluster } from "components/Cluster";
 
-export function Nav() {
-  const StyledCluster = styled(Cluster)`
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    font-size: 1.5rem;
-  `;
+const StyledCluster = styled(Cluster)`
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.5rem;
+`;
 
+export function Nav() {
   return (
     <nav>
       <StyledCluster forwardedAs="ul" align="center" space="2rem">
