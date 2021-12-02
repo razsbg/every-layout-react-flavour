@@ -8,6 +8,15 @@ const ScaleItemContainer = styled.div`
   flex-direction: column;
 `;
 
+const ScaleItemBar = styled.p`
+  width: 100%;
+  ${({ cssVarName }) => `height: var(${cssVarName});`}
+
+  outline-offset: 1px;
+  background-color: black;
+  outline: 1px solid hsl(255 0% 0% / 0.75);
+`;
+
 const scaleNumbers = [5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5];
 
 const StyledGrid = styled(Grid)`
@@ -22,7 +31,7 @@ export function ModularScale() {
 
         return (
           <ScaleItemContainer key={index}>
-            <p style={{ width: "100%", height: `var(${cssVarName})`, backgroundColor: "black" }} />
+            <ScaleItemBar cssVarName={cssVarName} />
             <p style={{ fontWeight: "bold" }}>{cssVarName}</p>
           </ScaleItemContainer>
         );
