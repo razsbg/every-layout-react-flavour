@@ -5,7 +5,7 @@ import { Logo } from "components/Logo";
 import { Cluster } from "components/Cluster";
 
 const StyledCluster = styled(Cluster)`
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 0;
 `;
 
 export function Header() {
