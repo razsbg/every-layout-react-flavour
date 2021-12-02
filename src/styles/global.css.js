@@ -3,11 +3,11 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
   :root {
 
-    --clr-bg: hsl(12, 100%, 82%);
-    --clr-body-text: hsl(252, 51%, 24%);
-    
+    --clr-bg: 12deg 100% 82%;
+    --clr-body-text: 252deg 51% 24%;
+
     --ff: sans-serif;
-    
+
     --ratio: 1.5;
     --s-5: calc(var(--s-4) / var(--ratio));
     --s-4: calc(var(--s-3) / var(--ratio));
@@ -21,11 +21,11 @@ export default createGlobalStyle`
     --s4: calc(var(--s3) * var(--ratio));
     --s5: calc(var(--s4) * var(--ratio));
   }
-  
+
   html {
-    background-color: var(--clr-bg);
-    color: var(--clr-body-text);
     font-family: var(--ff);
+    color: hsl(var(--clr-body-text));
+    background-color: hsl(var(--clr-bg));
   }
 
   html,
