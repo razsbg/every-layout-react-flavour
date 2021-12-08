@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import { Grid } from "components/Grid";
 import { Stack } from "components/Stack";
+import { Center } from "components/Center";
 import { Header } from "components/Header";
 import { Switcher } from "components/Switcher";
 import { ModularScale } from "components/ModularScale";
@@ -62,14 +63,35 @@ function App() {
               voluptates deleniti voluptas ratione officiis, neque, nostrum ullam totam quas voluptatem? A, rem
               corporis! Atque, quas beatae.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, accusantium tempore quisquam nostrum
-              quaerat labore illum unde totam recusandae ut eius sunt eos eaque minima earum itaque? Veniam fugiat
-              magnam vel qui illum amet tempora iste! Cum vero laudantium blanditiis repellendus magnam beatae
-              praesentium dignissimos excepturi, molestias numquam cumque inventore dicta consequatur dolore pariatur?
-              Molestiae qui commodi iusto ad tenetur blanditiis reprehenderit labore quo cupiditate repudiandae iste
-              aliquid nostrum, ratione, sit quae similique ducimus porro.
-            </p>
+            <Center
+              intrinsic
+              as={({ children, className }) => (
+                <Stack space=".75rem" className={className}>
+                  {children}
+                </Stack>
+              )}
+            >
+              <h2>Center</h2>
+              <button
+                style={{
+                  border: 0,
+                  outline: 0,
+                  color: "white",
+                  padding: "0.25em .75em",
+                  backgroundColor: "salmon",
+                }}
+              >
+                Centered
+              </button>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, accusantium tempore quisquam nostrum
+                quaerat labore illum unde totam recusandae ut eius sunt eos eaque minima earum itaque? Veniam fugiat
+                magnam vel qui illum amet tempora iste! Cum vero laudantium blanditiis repellendus magnam beatae
+                praesentium dignissimos excepturi, molestias numquam cumque inventore dicta consequatur dolore pariatur?
+                Molestiae qui commodi iusto ad tenetur blanditiis reprehenderit labore quo cupiditate repudiandae iste
+                aliquid nostrum, ratione, sit quae similique ducimus porro.
+              </p>
+            </Center>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, corporis similique eligendi distinctio
               voluptates deleniti voluptas ratione officiis, neque, nostrum ullam totam quas voluptatem? A, rem

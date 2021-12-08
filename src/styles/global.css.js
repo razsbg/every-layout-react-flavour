@@ -20,6 +20,8 @@ export default createGlobalStyle`
     --s3: calc(var(--s2) * var(--ratio));
     --s4: calc(var(--s3) * var(--ratio));
     --s5: calc(var(--s4) * var(--ratio));
+
+    --measure: 60ch;
   }
 
   html {
